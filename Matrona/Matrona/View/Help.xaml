@@ -5,8 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Matrona.Help"
-             Title="ПОМОЩЬ ХРАМУ"
-             BackgroundColor="White">
+             Title="ПОМОЩЬ ХРАМУ">
     <ContentPage.Content>
         <StackLayout Spacing="0">
             <ScrollView>
@@ -67,8 +66,8 @@
                 </Frame>
             </ScrollView>
             <BoxView BackgroundColor="#fde566"
-                    VerticalOptions="EndAndExpand"
-                    HeightRequest="50"></BoxView>
+                     VerticalOptions="EndAndExpand"
+                     HeightRequest="50"></BoxView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
