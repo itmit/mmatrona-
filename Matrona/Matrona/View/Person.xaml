@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Matrona.View.Person"
+             Title="ДУХОВЕНСТВО">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="Bannery_5.png"
+                   Aspect="AspectFill"></Image>
+            <StackLayout Spacing="0">
+                <ListView  ItemsSource="{Binding Lists}"
+                           SeparatorVisibility="None"
+                           HasUnevenRows="True"
+                           SelectionMode="None"
+                           VerticalScrollBarVisibility="Never">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame BorderColor="#fde566"
+                                       Margin="20,5,20,5"
+                                       CornerRadius="20"
+                                       Opacity="0.9">
+                                    <StackLayout>
+                                        <Label Text="{Binding Title}"
+                                               TextColor="Black"
+                                               FontFamily="Verdana"
+                                               FontAttributes="Bold"></Label>
+                                        <StackLayout>
+                                            <Image Source="{Binding SorceImage}"></Image>
+                                            <Frame Padding="5"
+                                                   CornerRadius="5">
+                                                <StackLayout>
+                                                    <Label Text="БИОГРАФИЯ"
+                                                           HorizontalOptions="CenterAndExpand"
+                                                           FontFamily="Verdana"></Label>
+                                                    <Label Text="{Binding Span}"
+                                                           FontFamily="Verdana"
+                                                           LineBreakMode="CharacterWrap"></Label>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <BoxView BackgroundColor="#fde566"
+                         VerticalOptions="EndAndExpand"
+                         HeightRequest="50"></BoxView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

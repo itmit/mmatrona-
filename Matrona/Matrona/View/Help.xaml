@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Matrona.Help"
+             Title="ПОМОЩЬ ХРАМУ"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ScrollView>
+                <Frame HasShadow="False">
+                    <StackLayout Spacing="20">
+                        <Label x:Name="Label1"
+                               FontAttributes="Bold"
+                               FontFamily="Verdana"
+                               TextColor="Black"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                        <Label x:Name="Label2"
+                               HorizontalTextAlignment="Center"
+                               FontFamily="Verdana"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"></Label>
+                        <Label x:Name="Label3"
+                               HorizontalTextAlignment="Center"
+                               FontFamily="Verdana"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"></Label>
+                        <Label x:Name="Label4"
+                               HorizontalTextAlignment="Center"
+                               VerticalOptions="Start"
+                               HorizontalOptions="CenterAndExpand"></Label>
+                        <Label x:Name="Label5"
+                               HorizontalTextAlignment="Center"
+                               FontFamily="Verdana"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"></Label>
+                        <Image Source="venzelya.png"></Image>
+                        <Frame CornerRadius="10"
+                               BorderColor="#fde566">
+                            <Label>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span x:Name="Span1"
+                                                  FontAttributes="Bold"
+                                                  TextColor="Black"
+                                                  FontFamily="Verdana"></Span>
+                                            <Span x:Name="Span2"
+                                                  FontFamily="Verdana"></Span>
+                                            <Span x:Name="Span3"
+                                                  FontAttributes="Bold"
+                                                  FontFamily="Verdana"
+                                                  TextColor="Black"></Span>
+                                            <Span x:Name="Span4"
+                                                  FontFamily="Verdana"></Span>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+            <BoxView BackgroundColor="#fde566"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="50"></BoxView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

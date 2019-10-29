@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Matrona.View.MatronaM"
+             Title="КОВЧЕЖЕЦ">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Source="Bannery_5.png"
+                   Aspect="AspectFill"></Image>
+            <StackLayout Spacing="0">
+                <Frame Opacity="0.9"
+                        CornerRadius="20"
+                        BorderColor="#fde566"
+                        IsClippedToBounds="True"
+                        Margin="20,5,20,5">
+                    <ScrollView>
+                        <StackLayout>
+                            <Image Source="kov.png"
+                                   Aspect="AspectFill"
+                                   HeightRequest="200"
+                                   WidthRequest="200"></Image>
+                            <Label  HorizontalTextAlignment="Center"
+                                    FontFamily="Verdana">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <FormattedString.Spans>
+                                            <Span x:Name="Matrona"></Span>
+                                            <Span x:Name="Warning"
+                                                  TextColor="#fe0101"></Span>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </ScrollView>
+                </Frame>
+                <BoxView BackgroundColor="#fde566"
+                         VerticalOptions="EndAndExpand"
+                         HeightRequest="50"></BoxView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

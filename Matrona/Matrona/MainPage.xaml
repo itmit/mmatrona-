@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Matrona.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage x:Name="ContentPage" Title="Title1" BackgroundColor="#fde566">
+            <ContentPage.Content>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="ic_1.png"></Image>
+                        <Button x:Name="News" 
+                                BindingContext="{x:Reference ContentPage}" 
+                                BackgroundColor="{Binding Path=BackgroundColor}" 
+                                Text="Новости" 
+                                FontFamily="Verdana" 
+                                Clicked="News_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="ic_2.png"></Image>
+                        <Button x:Name="Help" 
+                                BindingContext="{x:Reference ContentPage}" 
+                                BackgroundColor="{Binding Path=BackgroundColor}" 
+                                Text="Помощь храму" 
+                                FontFamily="Verdana" 
+                                Clicked="Help_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="ic_3.png"></Image>
+                        <Button x:Name="Table" 
+                                BindingContext="{x:Reference ContentPage}" 
+                                BackgroundColor="{Binding Path=BackgroundColor}" 
+                                Text="Расписание" 
+                                FontFamily="Verdana" 
+                                Clicked="Table_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="ic_4.png"></Image>
+                        <Button x:Name="Temple" 
+                                BindingContext="{x:Reference ContentPage}" 
+                                BackgroundColor="{Binding Path=BackgroundColor}" 
+                                Text="О храме"
+                                FontFamily="Verdana" 
+                                Clicked="Temple_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="contacts.png"></Image>
+                        <Button x:Name="Contact"
+                                BindingContext="{x:Reference ContentPage}"
+                                BackgroundColor="{Binding Path=BackgroundColor}"
+                                Text="Контакты"
+                                FontFamily="Verdana"
+                                Clicked="Contact_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="Dukhovenstvo.png"></Image>
+                        <Button x:Name="Person"
+                                BindingContext="{x:Reference ContentPage}"
+                                BackgroundColor="{Binding Path=BackgroundColor}"
+                                Text="Духовенство"
+                                FontFamily="Verdana"
+                                Clicked="Person_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout  Orientation="Horizontal">
+                        <Image Aspect="AspectFit" 
+                               Scale="0.6" 
+                               Source="Kovchezhets.png"></Image>
+                        <Button x:Name="Matrona"
+                                BindingContext="{x:Reference ContentPage}"
+                                BackgroundColor="{Binding Path=BackgroundColor}"
+                                Text="Ковчежец"
+                                FontFamily="Verdana"
+                                Clicked="Matrona_Clicked"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
