@@ -3,49 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewCell="clr-namespace:Matrona.ViewCells"
              mc:Ignorable="d"
-             x:Class="Matrona.News" Title="НОВОСТИ">
-    
+             x:Class="Matrona.News">
+    <NavigationPage.TitleView>
+        <Label Text="НОВОСТИ" TextColor="Black" FontSize="Large"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
+        <!--Страница новостей-->
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Image Source="Bannery_5.png"
-                   Aspect="AspectFill"></Image>
-            <StackLayout Spacing="0">
-                <ListView  ItemsSource="{Binding Lists}"
-                           SeparatorVisibility="None"
-                           HasUnevenRows="True"
-                           SelectionMode="None"
-                           VerticalScrollBarVisibility="Never">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Frame IsClippedToBounds="True"
-                                       BorderColor="#fde566"
-                                       Margin="20,5,20,5"
-                                       CornerRadius="20"
-                                       Opacity="0.9">
-                                    <StackLayout>
-                                        <Label Text="{Binding Title}"
-                                               TextColor="Black"
-                                               FontFamily="Verdana"
-                                               HorizontalTextAlignment="Center"></Label>
-                                        <Label Text="{Binding Span}"
-                                               FontSize="12"
-                                               FontFamily="Verdana"
-                                               HorizontalTextAlignment="Center"></Label>
-                                    </StackLayout>
-                                </Frame>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <BoxView BackgroundColor="#fde566"
-                         VerticalOptions="EndAndExpand"
-                         HeightRequest="50"></BoxView>
-            </StackLayout>
+            <Image Style="{StaticResource BackgroundImage}"/>
+            <ListView  ItemsSource="{Binding Lists}" Style="{StaticResource List}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <viewCell:NewsViewCell/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <BoxView Style="{StaticResource BottomBar}"/>
+            <Image Style="{StaticResource ImageM}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+    

@@ -4,70 +4,45 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Matrona.Help"
-             Title="ПОМОЩЬ ХРАМУ">
+             x:Class="Matrona.Help">
+    <NavigationPage.TitleView>
+        <Label Text="ПОМОЩЬ ХРАМУ" TextColor="Black" FontSize="Large"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <StackLayout Spacing="0">
-            <ScrollView>
-                <Frame HasShadow="False">
-                    <StackLayout Spacing="20">
-                        <Label x:Name="Label1"
-                               FontAttributes="Bold"
-                               FontFamily="Verdana"
-                               TextColor="Black"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand"/>
-                        <Label x:Name="Label2"
-                               HorizontalTextAlignment="Center"
-                               FontFamily="Verdana"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand"></Label>
-                        <Label x:Name="Label3"
-                               HorizontalTextAlignment="Center"
-                               FontFamily="Verdana"
-                               HorizontalOptions="CenterAndExpand"
-                               VerticalOptions="CenterAndExpand"></Label>
-                        <Label x:Name="Label4"
-                               HorizontalTextAlignment="Center"
-                               VerticalOptions="Start"
-                               HorizontalOptions="CenterAndExpand"></Label>
-                        <Label x:Name="Label5"
-                               HorizontalTextAlignment="Center"
-                               FontFamily="Verdana"
-                               TextColor="Black"
-                               FontAttributes="Bold"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand"></Label>
-                        <Image Source="venzelya.png"></Image>
-                        <Frame CornerRadius="10"
-                               BorderColor="#fde566">
-                            <Label>
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <FormattedString.Spans>
-                                            <Span x:Name="Span1"
-                                                  FontAttributes="Bold"
-                                                  TextColor="Black"
-                                                  FontFamily="Verdana"></Span>
-                                            <Span x:Name="Span2"
-                                                  FontFamily="Verdana"></Span>
-                                            <Span x:Name="Span3"
-                                                  FontAttributes="Bold"
-                                                  FontFamily="Verdana"
-                                                  TextColor="Black"></Span>
-                                            <Span x:Name="Span4"
-                                                  FontFamily="Verdana"></Span>
-                                        </FormattedString.Spans>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </Frame>
-                    </StackLayout>
-                </Frame>
-            </ScrollView>
-            <BoxView BackgroundColor="#fde566"
-                     VerticalOptions="EndAndExpand"
-                     HeightRequest="50"></BoxView>
-        </StackLayout>
+        <!--Страница помощи-->
+        <Grid>
+            <StackLayout Spacing="0">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="TextColor" Value="Gray"/>
+                            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                            <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <ScrollView>
+                    <Frame HasShadow="False">
+                        <StackLayout Spacing="20">
+                            <Label Text="Дорогие братья и сестры!" TextColor ="Black"/>
+                            <Label Text="По благословению святейшего Патриарха Московского и всея Руси Кирилла учреждена община строящегося храма во имя святой блаженной Матроны Московской в Дмитровском районе г. Москвы."/>
+                            <Label Text="Милостью Божьей - это будет первый храм в нашем городе, посвященный этой великой угоднице Божьей"/>
+                            <Label Text="Каждый, кто желает быть под молитвенным покровом этой святой, может теперь откликнуться и внести посильную лепту в дело строительства нашего храма."/>
+                            <Label Text="Всякого жертвующего с любовью&#10;Да благословит Господь" TextColor="Black"/>
+                            <Image Source="venzelya.png"/>
+                            <Frame Style="{StaticResource ContentFrame}">
+                                <StackLayout>
+                                    <Label Text="Реквизиты храма:&#10;&#10;ИНН 7713387360&#10;КПП 771301001&#10;Р/с 40703810938040004969&#10;К/с 30101810400000000225&#10;БИК 044525225&#10;Банк ПАО «Сбербанк России» г.Москва" TextColor="Black" HorizontalTextAlignment="Start"/>
+                                    <Label Text="Полное наименование:&#10;&#10;Местная религиозная организация Православный приход храма блаженной Матроны Московской в Дмитровском гор. Москвы Московской епархии Русской Православной Церкви(Московский Патриархат)." TextColor="Black" HorizontalTextAlignment="Start"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </ScrollView>
+            </StackLayout>
+            <BoxView Style="{StaticResource BottomBar}"/>
+            <Image Style="{StaticResource ImageM}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

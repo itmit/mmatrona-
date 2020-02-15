@@ -17,9 +17,6 @@ namespace Matrona.View
         public MatronaM()
         {
             InitializeComponent();
-            Match match = Regex.Match(Text.Str(), @"<2>(?'matrona'.*?)<2><3>(?'warning'.*?)<3>");
-            Matrona.Text = match.Groups["matrona"].Value + "\n\n";
-            Warning.Text = match.Groups["warning"].Value;
         }
     }
 }

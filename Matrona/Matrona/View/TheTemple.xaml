@@ -4,33 +4,26 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Matrona.View.TheTemple"
-             Title="О ХРАМЕ">
+             x:Class="Matrona.View.TheTemple">
+    <NavigationPage.TitleView>
+        <Label Text="О ХРАМЕ" TextColor="Black" FontSize="Large"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
+        <!--Страница о храме-->
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Image Source="Bannery_5.png"
-                   Aspect="AspectFill"></Image>
-            <StackLayout Spacing="0">
-                <Frame Opacity="0.9"
-                       CornerRadius="20"
-                       BorderColor="#fde566"
-                       IsClippedToBounds="True"
-                       Margin="20,5,20,5"
-                       VerticalOptions="CenterAndExpand">
+            <Image Style="{StaticResource BackgroundImage}"/>
+            <StackLayout Spacing="0" VerticalOptions="Start">
+                <Frame Style="{StaticResource ContentFrame}" Padding="1" VerticalOptions="CenterAndExpand">
                     <StackLayout>
-                        <Image Source="hramizvonnitsa.png"
-                               Aspect="AspectFit"></Image>
-                        <Label x:Name="TempleText"
-                               FontFamily="Verdana"></Label>
+                        <Frame IsClippedToBounds="True" CornerRadius="20" Padding="0">
+                            <Image Source="hramizvonnitsa.png" Aspect="AspectFit"/>
+                        </Frame>
+                        <Label Text="Храм является приходом Русской Православной Церкви, входящим в состав Московской городской епархии, Северного викариатства, Знаменского благочиния. На приходе открыта воскресная школа, создано молодежное движение, организуются паломнические поездки, приход окормляет ГКБ №81, при которой действует Часовня в честь праведного Иоанна Кронштадтского. Протоиерей Димитрий Синицын исповедает и причащает больных, вместе с молодежным активом прихода поздравляет больных, готовит всем подарки к крупным праздникам." TextColor="#000000" Margin="10,5"/>
                     </StackLayout>
                 </Frame>
-                <BoxView BackgroundColor="#fde566"
-                         VerticalOptions="EndAndExpand"
-                         HeightRequest="50"></BoxView>
             </StackLayout>
+            <BoxView Style="{StaticResource BottomBar}"/>
+            <Image Style="{StaticResource ImageM}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

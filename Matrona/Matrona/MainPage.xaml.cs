@@ -18,82 +18,49 @@ namespace Matrona
         {
             InitializeComponent();
 
-            Detail = new NavigationPage(new News())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new News());
             IsPresented = true;
         }
 
         private void News_Clicked(object sender, EventArgs e)
         {
-
-            Detail = new NavigationPage(new News())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black,
-            };  
+            Detail = new NavigationPage(new News());
             IsPresented = false;
         }
 
         private void Help_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Help())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new Help());
             IsPresented = false;
         }
 
         private void Table_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Table())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new Table());
             IsPresented = false;
         }
 
         private void Temple_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new TheTemple())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new TheTemple());
             IsPresented = false;
         }
 
         private void Contact_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Contact())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new Contact());
             IsPresented = false;
         }
 
         private void Person_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Person())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new Person());
             IsPresented = false;
         }
 
         private void Matrona_Clicked(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new MatronaM())
-            {
-                BarBackgroundColor = Color.FromHex("#fde566"),
-                BarTextColor = Color.Black
-            };
+            Detail = new NavigationPage(new MatronaM());
             IsPresented = false;
         }
     }

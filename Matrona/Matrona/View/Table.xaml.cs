@@ -13,7 +13,7 @@ namespace Matrona
        {
             InitializeComponent();
             try { BindingContext = new TableViewModel(); }
-            catch { }
+            catch { Application.Current.MainPage.DisplayAlert("ВНИМАНИЕ!","Нет подключения к сети","ОК"); }
         }
     }  
 }

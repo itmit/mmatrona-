@@ -6,6 +6,49 @@
              mc:Ignorable="d"
              x:Class="Matrona.App">
     <Application.Resources>
-
+        <!--Глобальные стили-->
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#fde566"/>
+                <Setter Property="BarTextColor" Value="#000000"/>
+            </Style>
+            <Style x:Key="BackgroundImage" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill"/>
+                <Setter Property="Source" Value="Bannery_5.png"/>
+            </Style>
+            <Style x:Key="BottomBar" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="BackgroundColor" Value="#fde566"/>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            </Style>
+            <Style x:Key="MainFrame" TargetType="Frame">
+                <Setter Property="Opacity" Value="0.9"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="BorderColor" Value="#fde566"/>
+            </Style>
+            <Style x:Key="CellFrame" TargetType="Frame" BasedOn="{StaticResource MainFrame}">
+                <Setter Property="Margin" Value="20,5"/>
+            </Style>
+            <Style x:Key="ContentFrame" TargetType="Frame" BasedOn="{StaticResource MainFrame}">
+                <Setter Property="Margin" Value="20,5,20,55"/>
+            </Style>
+            <Style x:Key="List" TargetType="ListView">
+                <Setter Property="HasUnevenRows" Value="True"/>
+                <Setter Property="SeparatorVisibility" Value="None"/>
+                <Setter Property="VerticalScrollBarVisibility" Value="Never"/>
+                <Setter Property="SelectionMode" Value="None"/>
+                <Setter Property="Margin" Value="0,0,0,50"/>
+            </Style>
+            <Style x:Key="ImageM" TargetType="Image">
+                <Setter Property="WidthRequest" Value="37"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+                <Setter Property="Source" Value="pic_mmatrona.png"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="TriodPostnaja.ttf#TriodPostnaja"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

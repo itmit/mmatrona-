@@ -4,42 +4,35 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Matrona.View.Contact"
-             Title="КОНТАКТЫ">
+             x:Class="Matrona.View.Contact">
+    <NavigationPage.TitleView>
+        <Label Text="КОНТАКТЫ" TextColor="Black" FontSize="Large"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
+        <!--Страница контактов-->
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Image Source="Bannery_5.png"
-                   Aspect="AspectFill"></Image>
+            <Image Style="{StaticResource BackgroundImage}"/>
             <StackLayout Spacing="0">
-                <Frame Opacity="0.9"
-                        CornerRadius="20"
-                        BorderColor="#fde566"
-                        IsClippedToBounds="True"
-                        Margin="20,5,20,5">
+                <Frame Style="{StaticResource ContentFrame}">
                     <ScrollView>
                         <StackLayout>
-                            <Label>
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <FormattedString.Spans>
-                                            <Span x:Name="ContactC"
-                                                  TextColor="Black"
-                                                  FontFamily="Verdana"
-                                                  FontAttributes="Bold"/>
-                                        </FormattedString.Spans>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
+                            <StackLayout.Resources>
+                                <ResourceDictionary>
+                                    <Style TargetType="Label">
+                                        <Setter Property="TextColor" Value="#000000"/>
+                                    </Style>
+                                </ResourceDictionary>
+                            </StackLayout.Resources>
+                            <Label Text="Адрес:&#10;127411, город Москва, улица Софьи Ковалевской, владение 14а."/>
+                            <Label Text="Проезд:&#10;от ст. метро «Алтуфьево» автобус № 92, 284 — до остановки: «Храм Матроны Московской»&#10;от ст. метро «Речной вокзал» автобус № 284 — до остановки: «Храм Матроны Московской»&#10;от ст. метро «Селигерская» автобус № 191, 194, 672 — до остановки «Храм Матроны Московской»"/>
+                            <Label Text="Храм открыт:&#10;ежедневно с 10:00 до 19:00, когда нет в расписании богослужений. Также работает церковная лавка."/>
+                            <Label Text="Телефон для справок: +7(966)121-45-41&#10;Телефон лавки: +7(916)467-04-64&#10;Телефон катехизатора (вопросы связанные с проведением огласительных бесед, крещением и венчанием): +7(926)020-38-01&#10;Социальная служба (вопросы связанные с приемом новых вещей (одежды, обуви), а также продуктов): +7(925)184-54-32.&#10;Воскресная школа: +7(963)772-26-44&#10;Паломническая служба: +7(915)200-75-08&#10;Сестричество (помощь одиноким нуждающимся больным ГКБ №81 им. В.В. Вересаева): +7(916)162-99-20&#10;Официальный адрес электронной почты: hram-mmatrona@yandex.ru"/>
                         </StackLayout>
                     </ScrollView>
                 </Frame>
-                <BoxView BackgroundColor="#fde566"
-                         VerticalOptions="EndAndExpand"
-                         HeightRequest="50"></BoxView>
             </StackLayout>
+            <BoxView Style="{StaticResource BottomBar}"/>
+            <Image Style="{StaticResource ImageM}"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -10,7 +10,7 @@ namespace Matrona.ViewModel
 {
     class TableViewModel
     {
-        public List<ListNews> Lists { get; }
+        public List<ListNews> ImageList { get; }
         public ListNews[] Data { get; }
         public string[] Stroka { get; set; }
         public TableViewModel()
@@ -26,8 +26,8 @@ namespace Matrona.ViewModel
                 Data[i] = new ListNews { SorceImage = Stroka[i] };
             }
 
-            Lists = new List<ListNews>(count);
-            Lists.AddRange(Data);
+            ImageList = new List<ListNews>(count);
+            ImageList.AddRange(Data);
         }
     }
 }

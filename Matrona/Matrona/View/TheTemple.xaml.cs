@@ -17,8 +17,6 @@ namespace Matrona.View
         public TheTemple()
         {
             InitializeComponent();
-            Match match = Regex.Match(Text.Str(), @"<1>(?'temple'.*?)<1>");
-            TempleText.Text = match.Groups["temple"].Value;
         }
     }
 }

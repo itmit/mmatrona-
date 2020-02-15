@@ -1,9 +1,6 @@
 ﻿using Matrona.Model;
 using Matrona.Service;
-using System;
 using System.Collections.Generic;
-using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Matrona.ViewModel

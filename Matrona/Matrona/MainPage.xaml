@@ -5,89 +5,81 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Matrona.MainPage">
-
     <MasterDetailPage.Master>
         <ContentPage x:Name="ContentPage" Title="Title1" BackgroundColor="#fde566">
             <ContentPage.Content>
-                <StackLayout HorizontalOptions="CenterAndExpand">
-                    <StackLayout Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="ic_1.png"></Image>
-                        <Button x:Name="News" 
-                                BindingContext="{x:Reference ContentPage}" 
-                                BackgroundColor="{Binding Path=BackgroundColor}" 
-                                Text="Новости" 
-                                FontFamily="Verdana" 
-                                Clicked="News_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="ic_2.png"></Image>
-                        <Button x:Name="Help" 
-                                BindingContext="{x:Reference ContentPage}" 
-                                BackgroundColor="{Binding Path=BackgroundColor}" 
-                                Text="Помощь храму" 
-                                FontFamily="Verdana" 
-                                Clicked="Help_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="ic_3.png"></Image>
-                        <Button x:Name="Table" 
-                                BindingContext="{x:Reference ContentPage}" 
-                                BackgroundColor="{Binding Path=BackgroundColor}" 
-                                Text="Расписание" 
-                                FontFamily="Verdana" 
-                                Clicked="Table_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="ic_4.png"></Image>
-                        <Button x:Name="Temple" 
-                                BindingContext="{x:Reference ContentPage}" 
-                                BackgroundColor="{Binding Path=BackgroundColor}" 
-                                Text="О храме"
-                                FontFamily="Verdana" 
-                                Clicked="Temple_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="contacts.png"></Image>
-                        <Button x:Name="Contact"
-                                BindingContext="{x:Reference ContentPage}"
-                                BackgroundColor="{Binding Path=BackgroundColor}"
-                                Text="Контакты"
-                                FontFamily="Verdana"
-                                Clicked="Contact_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="Dukhovenstvo.png"></Image>
-                        <Button x:Name="Person"
-                                BindingContext="{x:Reference ContentPage}"
-                                BackgroundColor="{Binding Path=BackgroundColor}"
-                                Text="Духовенство"
-                                FontFamily="Verdana"
-                                Clicked="Person_Clicked"></Button>
-                    </StackLayout>
-                    <StackLayout  Orientation="Horizontal">
-                        <Image Aspect="AspectFit" 
-                               Scale="0.6" 
-                               Source="Kovchezhets.png"></Image>
-                        <Button x:Name="Matrona"
-                                BindingContext="{x:Reference ContentPage}"
-                                BackgroundColor="{Binding Path=BackgroundColor}"
-                                Text="Ковчежец"
-                                FontFamily="Verdana"
-                                Clicked="Matrona_Clicked"></Button>
-                    </StackLayout>
-                </StackLayout>
+                <Grid HorizontalOptions="Center" Margin="0,30" RowSpacing="20" ColumnSpacing="15">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <Style x:Key="Image" TargetType="Image">
+                                <Setter Property="Grid.Column" Value="0"/>
+                                <Setter Property="WidthRequest" Value="18"/>
+                                <Setter Property="HeightRequest" Value="18"/>
+                            </Style>
+                            <Style x:Key="Label" TargetType="Label">
+                                <Setter Property="FontSize" Value="Body"/>
+                                <Setter Property="TextColor" Value="Black"/>
+                                <Setter Property="Grid.Column" Value="1"/>
+                                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Source="ic_1.png" Style="{StaticResource Image}" Grid.Row="0"></Image>
+                    <Image Source="ic_2.png" Style="{StaticResource Image}" Grid.Row="1"></Image>
+                    <Image Source="ic_calendar_today.png" Style="{StaticResource Image}" Grid.Row="2"></Image>
+                    <Image Source="ic_4.png" Style="{StaticResource Image}" Grid.Row="3"></Image>
+                    <Image Source="ic_people_outline.png" Style="{StaticResource Image}" Grid.Row="4"></Image>
+                    <Image Source="ic_person_outline.png" Style="{StaticResource Image}" Grid.Row="5"></Image>
+                    <Image Source="Kovchezhets.png" Style="{StaticResource Image}" Grid.Row="6"></Image>
+                    <Label x:Name="News" Text="НОВОСТИ" Style="{StaticResource Label}" Grid.Row="0">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="News_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Help" Text="ПОМОЩЬ ХРАМУ" Style="{StaticResource Label}" Grid.Row="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Help_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Table" Text="РАСПИСАНИЕ" Style="{StaticResource Label}" Grid.Row="2">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Table_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Temple" Text="О ХРАМЕ" Style="{StaticResource Label}" Grid.Row="3">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Temple_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Contact" Text="КОНТАКТЫ" Style="{StaticResource Label}" Grid.Row="4">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Contact_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Person" Text="ДУХОВЕНСТВО" Style="{StaticResource Label}" Grid.Row="5">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Person_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label x:Name="Matrona" Text="КОВЧЕЖЕЦ" Style="{StaticResource Label}" Grid.Row="6">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Matrona_Clicked" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>
