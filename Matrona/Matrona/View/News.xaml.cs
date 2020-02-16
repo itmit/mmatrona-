@@ -12,8 +12,7 @@ namespace Matrona
         public News()
         {
             InitializeComponent();
-            try { BindingContext = new ListViewModel(); }
-            catch { }
+			BindingContext = new ListViewModel();
         }
     }
 }

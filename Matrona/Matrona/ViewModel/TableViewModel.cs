@@ -10,9 +10,13 @@ namespace Matrona.ViewModel
 {
     class TableViewModel
     {
-        public List<ListNews> ImageList { get; }
-        public ListNews[] Data { get; }
-        public string[] Stroka { get; set; }
+
+		#region Fields
+		private List<ListNews> _imageList;
+		private ListNews[] _data;
+		private string[] _stroka;
+		#endregion
+
         public TableViewModel()
         {
             var image = new ParserService();
@@ -29,5 +33,26 @@ namespace Matrona.ViewModel
             ImageList = new List<ListNews>(count);
             ImageList.AddRange(Data);
         }
+
+        #region Prop
+		public List<ListNews> ImageList
+		{
+			get => _imageList;
+			set => _imageList = value;
+		}
+
+		public ListNews[] Data
+		{
+			get => _data;
+			set => _data = value;
+		}
+
+		public string[] Stroka
+		{
+			get => _stroka; 
+			set => _stroka = value;
+		}
+        #endregion
+
     }
 }

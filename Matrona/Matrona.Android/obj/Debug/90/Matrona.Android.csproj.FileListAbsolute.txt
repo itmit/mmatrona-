@@ -393,8 +393,6 @@ C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\dra
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\hramizvonnitsa.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_1.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_2.png
-C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_3.png
-C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_4.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\kov.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\one.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\three.png
@@ -414,8 +412,6 @@ C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\android
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StructuredItemsViewAdapter_2.java
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StructuredItemsViewRenderer_3.java
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\kovchezhets.png
-C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\dukhovenstvo.png
-C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\contacts.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\bin\Debug\com.itmit.matrona.apk
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\bin\Debug\com.itmit.matrona-Signed.apk
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\android\bin\com.itmit.matrona.apk
@@ -693,3 +689,6 @@ C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\dra
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\android\src\crc642226f3ddc938ec10\SplashActivity.java
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\pic_mmatrona_splash.png
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\background_white.png
+C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_temple.png
+C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_help.png
+C:\Users\79210\source\repos\Matrona\Matrona\Matrona.Android\obj\Debug\90\res\drawable\ic_news.png

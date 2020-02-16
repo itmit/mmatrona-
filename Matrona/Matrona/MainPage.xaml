@@ -3,20 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:binding="clr-namespace:Matrona.ViewModel;assembly=Matrona"
+             xmlns:page="clr-namespace:Matrona.View;assembly=Matrona"
              mc:Ignorable="d"
              x:Class="Matrona.MainPage">
+
+    <MasterDetailPage.BindingContext>
+        <binding:MainViewModel/>
+    </MasterDetailPage.BindingContext>
+
     <MasterDetailPage.Master>
-        <ContentPage x:Name="ContentPage" Title="Title1" BackgroundColor="#fde566">
+        <ContentPage Title=" " BackgroundColor="#fde566">
             <ContentPage.Content>
                 <Grid HorizontalOptions="Center" Margin="0,30" RowSpacing="20" ColumnSpacing="15">
                     <Grid.Resources>
                         <ResourceDictionary>
-                            <Style x:Key="Image" TargetType="Image">
+                            <Style TargetType="Image">
                                 <Setter Property="Grid.Column" Value="0"/>
-                                <Setter Property="WidthRequest" Value="18"/>
-                                <Setter Property="HeightRequest" Value="18"/>
+                                <Setter Property="WidthRequest" Value="20"/>
+                                <Setter Property="HeightRequest" Value="20"/>
                             </Style>
-                            <Style x:Key="Label" TargetType="Label">
+                            <Style TargetType="Label">
                                 <Setter Property="FontSize" Value="Body"/>
                                 <Setter Property="TextColor" Value="Black"/>
                                 <Setter Property="Grid.Column" Value="1"/>
@@ -25,58 +32,58 @@
                         </ResourceDictionary>
                     </Grid.Resources>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Image Source="ic_1.png" Style="{StaticResource Image}" Grid.Row="0"></Image>
-                    <Image Source="ic_2.png" Style="{StaticResource Image}" Grid.Row="1"></Image>
-                    <Image Source="ic_calendar_today.png" Style="{StaticResource Image}" Grid.Row="2"></Image>
-                    <Image Source="ic_4.png" Style="{StaticResource Image}" Grid.Row="3"></Image>
-                    <Image Source="ic_people_outline.png" Style="{StaticResource Image}" Grid.Row="4"></Image>
-                    <Image Source="ic_person_outline.png" Style="{StaticResource Image}" Grid.Row="5"></Image>
-                    <Image Source="Kovchezhets.png" Style="{StaticResource Image}" Grid.Row="6"></Image>
-                    <Label x:Name="News" Text="НОВОСТИ" Style="{StaticResource Label}" Grid.Row="0">
+                    <Image Source="ic_news.png" Grid.Row="0"/>
+                    <Image Source="ic_help.png" Grid.Row="1"/>
+                    <Image Source="ic_calendar_today.png" Grid.Row="2"/>
+                    <Image Source="ic_temple.png" Grid.Row="3"/>
+                    <Image Source="ic_people_outline.png" Grid.Row="4"/>
+                    <Image Source="ic_person_outline.png" Grid.Row="5"/>
+                    <Image Source="Kovchezhets.png" Grid.Row="6"/>
+                    <Label Text="НОВОСТИ" Grid.Row="0">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="News_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenNewsCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Help" Text="ПОМОЩЬ ХРАМУ" Style="{StaticResource Label}" Grid.Row="1">
+                    <Label Text="ПОМОЩЬ ХРАМУ" Grid.Row="1">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Help_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenHelpCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Table" Text="РАСПИСАНИЕ" Style="{StaticResource Label}" Grid.Row="2">
+                    <Label Text="РАСПИСАНИЕ" Grid.Row="2">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Table_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenTableCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Temple" Text="О ХРАМЕ" Style="{StaticResource Label}" Grid.Row="3">
+                    <Label Text="О ХРАМЕ" Grid.Row="3">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Temple_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenTempleCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Contact" Text="КОНТАКТЫ" Style="{StaticResource Label}" Grid.Row="4">
+                    <Label Text="КОНТАКТЫ" Grid.Row="4">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Contact_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenContactsCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Person" Text="ДУХОВЕНСТВО" Style="{StaticResource Label}" Grid.Row="5">
+                    <Label Text="ДУХОВЕНСТВО" Grid.Row="5">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Person_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenPersonCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label x:Name="Matrona" Text="КОВЧЕЖЕЦ" Style="{StaticResource Label}" Grid.Row="6">
+                    <Label Text="КОВЧЕЖЕЦ" Grid.Row="6">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Matrona_Clicked" NumberOfTapsRequired="1"/>
+                            <TapGestureRecognizer Command="{Binding OpenMatronaMCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </Grid>

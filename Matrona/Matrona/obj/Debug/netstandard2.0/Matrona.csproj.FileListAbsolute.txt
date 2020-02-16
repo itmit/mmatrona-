@@ -7,7 +7,6 @@ C:\Users\79210\source\repos\Matrona\Matrona\Matrona\bin\Debug\netstandard2.0\Mat
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\Matrona.dll
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\ref\Matrona.dll
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\Matrona.pdb
-C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\Matrona.csprojAssemblyReference.cache
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\View\Help.xaml.g.cs
@@ -21,3 +20,4 @@ C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\Vie
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\ViewCells\NewsViewCell.xaml.g.cs
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\ViewCells\PersonViewCell.xaml.g.cs
 C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\ViewCells\TableViewCell.xaml.g.cs
+C:\Users\79210\source\repos\Matrona\Matrona\Matrona\obj\Debug\netstandard2.0\Matrona.csprojAssemblyReference.cache

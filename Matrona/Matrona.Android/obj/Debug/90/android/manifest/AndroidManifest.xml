@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.itmit.matrona" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="Matrona.Android" android:icon="@mipmap/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:icon="@mipmap/icon" android:label="Храм Матроны Московской" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="Matrona" android:screenOrientation="portrait" android:theme="@style/MainTheme" android:name="crc642226f3ddc938ec10.MainActivity" />
     <activity android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc642226f3ddc938ec10.SplashActivity">
       <intent-filter>
